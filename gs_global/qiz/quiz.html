@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>QUIZ</title>
+    <link rel="stylesheet" href="/gs_global/qiz/quiz.css" />
+</head>
+<body>
+    <div class="app">
+        <h1>QUIZ</h1>
+        <div class="quiz">
+            <h2 id="question">Perguntas aqui</h2>
+            <div id="answer-buttons">
+                <button class="btn">Answer1</button>
+                <button class="btn">Answer2</button>
+                <button class="btn">Answer3</button>
+                <button class="btn">Answer4</button>
+            </div>
+            <button id="next-btn">Próximo</button>
+        </div>
+
+        <!-- Formulário simples, oculto até o final do quiz -->
+        <form id="form-contato" style="display: none; margin-top: 20px;">
+            <h3>Envie seu feedback</h3>
+            <input type="text" id="nome" placeholder="Seu nome" required 
+                style="display:block; margin-bottom: 10px; width: 100%; padding: 8px;" />
+            <input type="email" id="email" placeholder="Seu email" required 
+                style="display:block; margin-bottom: 10px; width: 100%; padding: 8px;" />
+            <textarea id="mensagem" placeholder="Digite sua mensagem..." rows="4" required 
+                style="display:block; margin-bottom: 10px; width: 100%; padding: 8px;"></textarea>
+            <button type="submit" 
+                style="padding: 10px 20px;">Enviar</button>
+        </form>
+    </div>
+
+    <script src="/gs_global/qiz/quiz.js"></script>
+</body>
+</html>
