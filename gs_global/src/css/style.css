@@ -1,0 +1,424 @@
+:root {
+  --font-primary: 'Poppins', sans-serif;
+
+  --color-background: linear-gradient(135deg, #0047AB, #00C2FF);
+  --color-text: #e0e0e0;
+
+  --color-header-bg: linear-gradient(90deg, #0a2f66, #007bff);
+
+  --color-logo-border: #ffffff;
+
+  --color-nav-link: #ffffff;
+  --color-nav-hover: #FFB74D;
+  --color-nav-bg-mobile: #0a2f66;
+
+  --color-button-border: #FFA726;
+  --color-button-hover: #FFA726;
+
+  --color-container-bg: #FFA726;
+  --color-container-text: #fff;
+  --color-container-subtext: #a9d6e5;
+
+  --color-circle-bg: #f7f6f6;
+
+  --border-radius: 16px;
+
+  --container-padding: 40px;
+
+  --gap-large: 60px;
+  --gap-medium: 32px;
+  --gap-small: 20px;
+
+  --circle-size-desktop: 300px;
+  --circle-size-mobile: 180px;
+
+  --shadow: 0 6px 18px rgba(0,0,0,0.10);
+}
+
+
+/* Reset básico e fonte padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+}
+
+
+/* HTML e body com tamanho e fundo */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+
+/* Cabeçalho fixo */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  padding: 10px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: var(--color-header-bg);
+
+  z-index: 999;
+}
+
+
+/* Logo */
+.logo {
+  max-width: 120px;
+
+  border: 2px solid var(--color-logo-border);
+  border-radius: 50px;
+}
+
+
+/* Botão do menu (hamburguer) - inicialmente escondido */
+.menu-toggle {
+  display: none;
+
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: var(--color-nav-link);
+
+  cursor: pointer;
+
+  z-index: 1000;
+}
+
+
+/* Navegação principal */
+.nav {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Lista do menu */
+.nav ul {
+  display: flex;
+  list-style: none;
+
+  gap: var(--gap-medium);
+
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Links do menu */
+.nav li a {
+  color: var(--color-nav-link);
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: color 0.3s ease;
+
+  padding: 12px 16px;
+  border-radius: 6px;
+}
+
+
+/* Efeito hover nos links */
+.nav li a:hover {
+  color: var(--color-nav-hover);
+  background: rgba(255,255,255,0.07);
+}
+
+
+/* Botão do quiz */
+#quiz-btn {
+  border: 2px solid var(--color-button-border);
+  padding: 10px;
+  border-radius: 15px;
+}
+
+
+/* Hover do botão */
+#quiz-btn:hover {
+  background-color: var(--color-button-hover);
+  color: white;
+}
+
+
+/* Seção principal */
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 150px 40px 60px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--gap-large);
+
+  overflow: hidden;
+  z-index: 1;
+
+  flex-wrap: wrap;
+}
+
+
+/* Container dos conteúdos */
+.conteiner {
+  max-width: 700px;
+  width: 100%;
+
+  background-color: var(--color-container-bg);
+  color: var(--color-container-text);
+
+  padding: var(--container-padding);
+
+  border-radius: var(--border-radius);
+
+  margin-bottom: var(--gap-medium);
+
+  box-shadow: var(--shadow);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  text-align: left;
+  gap: 25px;
+
+  z-index: 1;
+}
+
+
+/* Título principal */
+.conteiner h1 {
+  font-size: 2.2em;
+  color: var(--color-container-text);
+}
+
+
+/* Subtítulo */
+.conteiner h3 {
+  font-size: 1.4em;
+  color: var(--color-container-subtext);
+}
+
+
+/* Parágrafos */
+.conteiner p {
+  color: var(--color-container-text);
+  font-size: 1em;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+
+/* Círculos com imagens (decorativos) */
+.circulo-esquerdo,
+.circulo-direito {
+  width: var(--circle-size-desktop);
+  height: var(--circle-size-desktop);
+
+  background-color: var(--color-circle-bg);
+
+  clip-path: circle(50% at center);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 0;
+
+  padding: 10px;
+}
+
+
+/* Posição do círculo esquerdo */
+.circulo-esquerdo {
+  position: absolute;
+  top: 160px;
+  left: 40px;
+}
+
+
+/* Posição do círculo direito */
+.circulo-direito {
+  position: absolute;
+  bottom: 60px;
+  right: 40px;
+}
+
+
+/* Imagens dentro dos círculos */
+.circulo-esquerdo img,
+.circulo-direito img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+
+/* Rodapé */
+footer {
+  width: 100%;
+  padding: 20px 40px;
+
+  background: var(--color-header-bg);
+
+  color: var(--color-text);
+
+  text-align: center;
+
+  font-size: 0.9em;
+
+  position: relative;
+  bottom: 0;
+
+  border-top: 3px solid var(--color-button-border);
+
+  box-shadow: 0 -3px 6px rgba(0,0,0,0.1);
+
+  z-index: 10;
+}
+
+
+/* Parágrafo do footer */
+footer p {
+  margin: 0;
+}
+
+
+/* Media query para telas até 900px (celulares maiores) */
+@media (max-width: 900px) {
+
+  header {
+    padding: 10px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+
+    background: var(--color-nav-bg-mobile);
+
+    display: none;
+
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px 0;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: var(--gap-small);
+  }
+
+  section {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-medium);
+    padding: 120px 10px 40px;
+  }
+
+  .conteiner {
+    padding: 24px;
+    text-align: center;
+    align-items: center;
+    border-radius: 12px;
+  }
+
+  .circulo-esquerdo,
+  .circulo-direito {
+    width: var(--circle-size-mobile);
+    height: var(--circle-size-mobile);
+
+    position: relative;
+
+    margin: 10px 0;
+    padding: 5px;
+
+    margin-top: 10%;
+  }
+
+  .circulo-esquerdo,
+  .circulo-direito {
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
+  }
+
+  .circulo-esquerdo img,
+  .circulo-direito img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  footer {
+    padding: 16px 20px;
+    font-size: 0.85em;
+  }
+}
+
+
+/* Media query para telas até 500px (celulares pequenos) */
+@media (max-width: 500px) {
+  .conteiner {
+    padding: 16px;
+  }
+
+  .conteiner h1 {
+    font-size: 1.6em;
+  }
+
+  .conteiner h3 {
+    font-size: 1.2em;
+  }
+
+  .conteiner p {
+    font-size: 0.95em;
+    line-height: 1.5;
+  }
+}
+
+
+/* Link ativo do menu */
+nav ul li a.active {
+  color: #FFD700;
+  font-weight: bold;
+  border-bottom: 2px solid #FFD700;
+}
