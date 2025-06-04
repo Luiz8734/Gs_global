@@ -164,6 +164,7 @@ section {
   border: 2px solid var(--color-white);
   box-shadow: rgba(0, 0, 0, 0.08) 0 4px 12px;
   position: relative;
+  left: 3%;
   top: 40px;
 }
 
@@ -296,3 +297,61 @@ footer a:hover {
   color: var(--color-accent-hover);
   text-decoration: underline;
 }
+
+.placa-slideshow {
+    position: relative;
+    max-width: 420px;
+    margin: 40px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+}
+
+.slides {
+    position: relative;
+    width: 100%;
+}
+
+.slide {
+    width: 100%;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 12px;
+}
+
+/* Mostrar o primeiro slide por padrão (JS cuida depois) */
+.slide:first-child {
+    display: block;
+}
+
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #222;
+    border: none;
+    font-size: 28px;
+    padding: 10px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.seta:hover {
+    background-color: #ffd35c;
+    color: #000;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+

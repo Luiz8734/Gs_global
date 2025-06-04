@@ -36,9 +36,16 @@
             <p>Isso permite respostas mais rápidas, evitando perdas materiais, protegendo vidas e garantindo mais segurança para quem vive em regiões vulneráveis. Com nossa tecnologia, comunidades inteiras podem se preparar melhor, minimizando os impactos das chuvas intensas e perigosas.</p>
             </p>
         </div>
-        <div class="placa">
-            <img src="../assets/img/placa.jpeg" alt="Pessoa impactada positivamente pela LNK TECH">
-        </div>
+        <div class="placa-slideshow">
+    <div class="slides">
+        <img src="../assets/img/placa.jpeg" class="slide" alt="Pessoa impactada 1">
+        <img src="../assets/img/placa2.png" class="slide" alt="Pessoa impactada 2">
+        <img src="../assets/img/placa3.png" class="slide" alt="Pessoa impactada 3">
+    </div>
+
+    <button class="seta prev" onclick="mudarSlide(-1)">&#10094;</button>
+    <button class="seta next" onclick="mudarSlide(1)">&#10095;</button>
+</div>
     </section>
 
 
@@ -48,6 +55,7 @@
     </footer>
 
     <script src="/gs_global/src/hamburguer/hamburguer.js"></script>
+    <script src="../hamburguer/slideshow.js"></script>
 </body>
 
 </html>
