@@ -64,6 +64,12 @@ header {
   color: var(--color-white);
 }
 
+/* Agrupamento logo + menu-toggle */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
 /* Logo da empresa */
 .logo {
   max-width: 130px;
@@ -252,10 +258,15 @@ img {
     display: block;
   }
 
-  .logo {
-    margin-right: 0;
-    margin-bottom: 12px;
-    max-width: 90px;
+.logo {
+  max-width: 120px;
+  border: 2px solid var(--color-white);
+  border-radius: 50px;
+}
+
+  .header-left {
+    width: 100%;
+    justify-content: space-between;
   }
 
   .nav {

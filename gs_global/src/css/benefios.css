@@ -56,10 +56,16 @@ header {
   z-index: 999;
 }
 
+/* Agrupamento logo + hambúrguer */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 /* Logo da empresa */
 .logo {
   max-width: 130px;
-  margin-right: 40px;
   border: 2px solid var(--color-border);
   border-radius: 50px;
 }
@@ -208,6 +214,11 @@ section {
     align-items: center;
   }
 
+  .header-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
   .menu-toggle {
     display: block;
   }
@@ -234,11 +245,10 @@ section {
   }
 
   .logo {
-    margin-right: 0;
-    margin-bottom: 12px;
-    max-width: 90px;
-  }
-
+  max-width: 130px;
+  border: 2px solid var(--color-border);
+  border-radius: 50px;
+}
   section {
     flex-direction: column;
     align-items: center;
@@ -251,6 +261,8 @@ section {
     padding: 20px 5px;
     align-items: center;
     text-align: center;
+    position: relative;
+    margin-top: 10%;
   }
 
   .resgate {
