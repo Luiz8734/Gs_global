@@ -371,3 +371,15 @@ footer a:focus {
 .pequena:hover {
   transform: scale(1.1); /* Aumenta o tamanho da imagem em 20% */
 }
+
+.img{
+  transition: transform 0.3s ease-in-out; /* Duração e suavidade da transição */
+}
+
+.img:hover {
+  transform: scale(1.1); /* Aumenta o tamanho da imagem em 20% */
+}
+
+.img:hover {
+  transform: scale(1.1); /* Aumenta o tamanho da imagem em 20% */
+}
