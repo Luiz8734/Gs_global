@@ -1,34 +1,41 @@
+/* =========================
+   VARIÁVEIS GLOBAIS
+   ========================= */
 :root {
   --font-primary: 'Poppins', sans-serif;
 
   --color-bg-gradient: linear-gradient(135deg, #0047AB, #00C2FF);
   --color-text: #e0e0e0;
 
-  --color-header-bg-gradient: linear-gradient(90deg, #0a2f66, #007bff);
+  --color-header-bg: linear-gradient(90deg, #0a2f66, #007bff);
   --color-header-text: #ffffff;
 
   --color-logo-border: #ffffff;
+
+  --color-nav-link: #ffffff;
+  --color-nav-hover: #FFB74D;
+  --color-nav-bg-mobile: #0a2f66;
 
   --color-hover-link: #FFB74D;
 
   --color-container-bg: #FFA726;
   --color-container-subtitle: #a9d6e5;
 
-  --header-padding-desktop: 10px 80px;
+  --header-padding-desktop: 10px 40px;
   --header-padding-mobile: 10px 20px;
 
   --logo-max-width-desktop: 120px;
   --logo-max-width-mobile: 90px;
 
-  --nav-gap: 40px;
+  --nav-gap: 32px;
 
   --section-padding-desktop: 150px 40px 60px;
   --section-padding-mobile: 120px 10px 40px;
 
-  --container-max-width-desktop: 800px;
-  --container-padding-desktop: 60px 20px;
-  --container-padding-mobile: 40px 10px;
-  --container-border-radius: 24px;
+  --container-max-width-desktop: 700px;
+  --container-padding-desktop: 40px;
+  --container-padding-mobile: 24px;
+  --container-border-radius: 16px;
 
   --image-border-radius: 50px;
   --image-border: 2px solid var(--color-logo-border);
@@ -40,17 +47,24 @@
   --btn-hover-bg: #FFA726;
   --btn-hover-color: white;
 
+  --gap-large: 60px;
+  --gap-medium: 32px;
   --gap-small: 20px;
 }
 
+/* =========================
+   RESET E BASE
+   ========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--font-primary);
 }
 
 html, body {
   height: 100%;
+  width: 100%;
   font-family: var(--font-primary);
   background: var(--color-bg-gradient);
   color: var(--color-text);
@@ -69,7 +83,9 @@ main {
   padding-top: 80px;
 }
 
-/* Header */
+/* =========================
+   CABEÇALHO (HEADER)
+   ========================= */
 header {
   position: fixed;
   top: 0;
@@ -79,7 +95,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--color-header-bg-gradient);
+  background: var(--color-header-bg);
   z-index: 999;
 }
 
@@ -100,12 +116,14 @@ header {
   font-size: 28px;
   background: none;
   border: none;
-  color: var(--color-header-text);
+  color: var(--color-nav-link);
   cursor: pointer;
   z-index: 1000;
 }
 
-/* Nav */
+/* =========================
+   NAVEGAÇÃO PRINCIPAL (PADRÃO DAS OUTRAS TELAS)
+   ========================= */
 .nav {
   flex: 1;
   display: flex;
@@ -115,31 +133,46 @@ header {
 .nav ul {
   display: flex;
   list-style: none;
-  gap: var(--nav-gap);
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  display: flex;
+  align-items: center;
 }
 
 .nav li a {
-  color: var(--color-header-text);
+  color: var(--color-nav-link);
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
-  padding: 12px 16px;
+  transition: color 0.3s ease;
+  padding: 12px 0;
   border-radius: 6px;
-  transition: all 0.3s ease;
+  min-width: 120px;
+  text-align: center;
+  display: inline-block;
 }
 
 .nav li a:hover {
-  color: var(--color-hover-link);
+  color: var(--color-nav-hover);
   background: rgba(255, 255, 255, 0.07);
 }
 
-.nav ul li a.active {
+/* Link ativo do menu */
+nav ul li a.active {
   color: #FFD700;
   font-weight: bold;
   border-bottom: 2px solid #FFD700;
 }
 
-/* Botão Quiz */
+/* =========================
+   BOTÃO QUIZ
+   ========================= */
 #quiz-btn {
   border: var(--btn-border);
   padding: var(--btn-padding);
@@ -151,7 +184,9 @@ header {
   color: var(--btn-hover-color);
 }
 
-/* Seções */
+/* =========================
+   SEÇÕES
+   ========================= */
 section {
   padding: var(--section-padding-desktop);
   display: flex;
@@ -166,7 +201,7 @@ section {
   padding: var(--container-padding-desktop);
   background: var(--color-container-bg);
   border-radius: var(--container-border-radius);
-  color: var(--color-header-text);
+  color: var(--color-nav-link);
   text-align: center;
   border: var(--image-border);
   position: relative;
@@ -197,7 +232,9 @@ section {
   margin-bottom: 10px;
 }
 
-/* Imagens */
+/* =========================
+   IMAGENS
+   ========================= */
 img {
   width: 100%;
   height: auto;
@@ -241,10 +278,12 @@ img {
   left: 5%;
 }
 
-/* Footer */
+/* =========================
+   RODAPÉ (FOOTER)
+   ========================= */
 footer {
   flex-shrink: 0;
-  background: var(--color-header-bg-gradient);
+  background: var(--color-header-bg);
   color: var(--color-text);
   text-align: center;
   padding: 20px 40px;
@@ -254,7 +293,7 @@ footer {
 }
 
 footer a {
-  color: var(--color-hover-link);
+  color: var(--color-nav-hover);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -265,9 +304,11 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Responsivo */
+/* =========================
+   RESPONSIVO - TELAS ATÉ 900PX
+   ========================= */
 @media (max-width: 900px) {
-  header {
+    header {
     padding: var(--header-padding-mobile);
     flex-direction: column;
     align-items: flex-start;
@@ -283,28 +324,45 @@ footer a:hover {
   }
 
   .nav {
-    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
     width: 100%;
-    background-color: #0a2f66;
+    background: var(--color-nav-bg-mobile); /* igual ao style.css */
+    display: none;
     flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 1001;
   }
 
   .nav.active {
     display: flex;
   }
-
-  .nav ul {
+    .nav ul {
     flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    padding: 0;
+    margin: 0;
   }
 
   .nav li a {
-    padding: 10px 0;
-    width: 100%;
+    padding: 8px 8px;
+    width: auto;
+    min-width: unset;
     display: block;
+    text-align: center;
+    font-size: 15px; /* igual aos outros navs */
+    font-family: var(--font-primary); /* garante a mesma fonte */
+    font-weight: 500; /* igual aos outros navs */
+    color: var(--color-nav-link); /* igual aos outros navs */
+    border-radius: 6px;
+    transition: color 0.3s ease;
   }
+
 
   section {
     padding: var(--section-padding-mobile);
@@ -327,13 +385,15 @@ footer a:hover {
   }
 }
 
+/* =========================
+   RESPONSIVO - TELAS ATÉ 500PX
+   ========================= */
 @media (max-width: 500px) {
- .logo {
-  max-width: 120px;
-
-  border: 2px solid var(--color-logo-border);
-  border-radius: 50px;
-}
+  .logo {
+    max-width: 120px;
+    border: 2px solid var(--color-logo-border);
+    border-radius: 50px;
+  }
 
   .conteiner {
     padding: 16px;
