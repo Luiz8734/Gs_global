@@ -11,8 +11,13 @@
 
 <body>
     <header>
-        <a href="#"><img src="../assets/img/Logo.png" alt="logo" class="logo" /></a>
-        <button class="menu-toggle" aria-label="Abrir Menu">☰</button>
+        <!-- Agrupamento da logo e do menu hamburguer -->
+        <div class="header-left">
+            <a href="#"><img src="../assets/img/Logo.png" alt="Logo" class="logo" /></a>
+            <button class="menu-toggle" aria-label="Abrir Menu">☰</button>
+        </div>
+
+        <!-- Navegação -->
         <nav class="nav">
             <ul>
                 <li><a href="/gs_global/index.html">Início</a></li>
@@ -21,7 +26,7 @@
                 <li><a href="/gs_global/src/pages/publico-alvo.html">Quem será impactado</a></li>
                 <li><a href="/gs_global/src/pages/benefios.html" class="active">Benefícios</a></li>
                 <li><a href="/gs_global/src/pages/solucao.html">Como ajudará?</a></li>
-                <li><a href="/gs_global/quiz/quiz.html" id="quiz-btn">QUIZ</a></li>
+                <li><a href="/gs_global/src/quiz/quiz.html" id="quiz-btn">QUIZ</a></li>
             </ul>
         </nav>
     </header>
@@ -49,7 +54,6 @@
 
     <footer>
         <p>© 2025 LNK TECH. Todos os direitos reservados.</p>
-        
     </footer>
 
     <script src="/gs_global/src/hamburguer/hamburguer.js"></script>

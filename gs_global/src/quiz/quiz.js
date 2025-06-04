@@ -1,188 +1,205 @@
-const questions = [
-
-
+const perguntasQuiz = [
     {
-    
-        question: "Qual órgão deve atuar na prevenção e no gerenciamento de desastres naturais como as enchentes no Brasil?",
-        answers: [
-            {id: 1, text: "INMET", correct:false},
-            {id: 2, text: "IBGE", correct:false},
-            {id: 3, text: "Receita Federal", correct:false},
-            {id: 4, text: "Defesa CIvil", correct:true}
+        pergunta: "Qual órgão deve atuar na prevenção e no gerenciamento de desastres naturais como as enchentes no Brasil?",
+        respostas: [
+            {id: 1, texto: "INMET", correta: false},
+            {id: 2, texto: "IBGE", correta: false},
+            {id: 3, texto: "Receita Federal", correta: false},
+            {id: 4, texto: "Defesa Civil", correta: true}
         ],
     },
-
-     {
-        question: "Como o descarte incorreto de lixo contribui para as enchentes?",
-        answers: [
-            {id: 1, text: "Aumenta a temperatura da água", correct:false},
-            {id: 2, text: "Bloqueia o escoamento da água em bueiros e canais", correct:true},
-            {id: 3, text: "Deixa o solo mais fértil", correct:false},
-            {id: 4, text: "Faz chover com mais frequência", correct:false}
+    {
+        pergunta: "Como o descarte incorreto de lixo contribui para as enchentes?",
+        respostas: [
+            {id: 1, texto: "Aumenta a temperatura da água", correta: false},
+            {id: 2, texto: "Bloqueia o escoamento da água em bueiros e canais", correta: true},
+            {id: 3, texto: "Deixa o solo mais fértil", correta: false},
+            {id: 4, texto: "Faz chover com mais frequência", correta: false}
         ],
     },
-
-     {
-        question: "Qual destas doenças é comum após enchentes?",
-        answers: [
-            {id: 1, text: "Sarampo", correct:false},
-            {id: 2, text: "Catapora", correct:false},
-            {id: 3, text: "Anemia", correct:false},
-            {id: 4, text: "Leptospirose", correct:true}
+    {
+        pergunta: "Qual destas doenças é comum após enchentes?",
+        respostas: [
+            {id: 1, texto: "Sarampo", correta: false},
+            {id: 2, texto: "Catapora", correta: false},
+            {id: 3, texto: "Anemia", correta: false},
+            {id: 4, texto: "Leptospirose", correta: true}
         ],
     },
-
-     {
-        question: "Qual região do Brasil costuma ser mais afetada por enchentes durante o verão?",
-        answers: [
-            {id: 1, text: "Norte", correct:false},
-            {id: 2, text: "Nordeste", correct:false},
-            {id: 3, text: "Sudeste", correct:true},
-            {id: 4, text: "Centro-Oeste", correct:false}
+    {
+        pergunta: "Qual região do Brasil costuma ser mais afetada por enchentes durante o verão?",
+        respostas: [
+            {id: 1, texto: "Norte", correta: false},
+            {id: 2, texto: "Nordeste", correta: false},
+            {id: 3, texto: "Sudeste", correta: true},
+            {id: 4, texto: "Centro-Oeste", correta: false}
         ],
     },
-
-     {
-        question: "Qual método o estado de São Paulo utiliza para evitar as enchentes nas cidades?",
-        answers: [
-            {id: 1, text: "Muros de proteção", correct:false},
-            {id: 2, text: "Piscinões", correct:true},
-            {id: 3, text: "Barreiras contra o mar", correct:false},
-            {id: 4, text: "Túneis para água", correct:false}
+    {
+        pergunta: "Qual método o estado de São Paulo utiliza para evitar as enchentes nas cidades?",
+        respostas: [
+            {id: 1, texto: "Muros de proteção", correta: false},
+            {id: 2, texto: "Piscinões", correta: true},
+            {id: 3, texto: "Barreiras contra o mar", correta: false},
+            {id: 4, texto: "Túneis para água", correta: false}
         ],
     },
-
-     {
-        question: "Qual destas ações NÃO contribui para a prevenção de enchentes?",
-        answers: [
-            {id: 1, text: "Plantio de árvores", correct:false},
-            {id: 2, text: "Construção de calçadas permeáveis", correct:false},
-            {id: 3, text: "Descarte de lixo em terrenos baldios", correct:true},
-            {id: 4, text: "Manutenção de canais de drenagem", correct:false}
+    {
+        pergunta: "Qual destas ações NÃO contribui para a prevenção de enchentes?",
+        respostas: [
+            {id: 1, texto: "Plantio de árvores", correta: false},
+            {id: 2, texto: "Construção de calçadas permeáveis", correta: false},
+            {id: 3, texto: "Descarte de lixo em terrenos baldios", correta: true},
+            {id: 4, texto: "Manutenção de canais de drenagem", correta: false}
         ],
     },
-
-     {
-        question: "As mudanças climáticas têm qual efeito sobre as enchentes?",
-        answers: [
-            {id: 1, text: "Reduzem o número de chuvas no país", correct:false},
-            {id: 2, text: "Tornam os rios mais profundos", correct:false},
-            {id: 3, text: "Intensificam as chuvas e aumentam a frequência de eventos extremos", correct:true},
-            {id: 4, text: "Diminuem a temperatura da água da chuva", correct:false}
+    {
+        pergunta: "As mudanças climáticas têm qual efeito sobre as enchentes?",
+        respostas: [
+            {id: 1, texto: "Reduzem o número de chuvas no país", correta: false},
+            {id: 2, texto: "Tornam os rios mais profundos", correta: false},
+            {id: 3, texto: "Intensificam as chuvas e aumentam a frequência de eventos extremos", correta: true},
+            {id: 4, texto: "Diminuem a temperatura da água da chuva", correta: false}
         ],
     },
-
-     {
-        question: "O que pode ser feito para reduzir os risco de enchentes nas cidades?",
-        answers: [
-            {id: 1, text: "Construir casas nas margens dos rios", correct:false},
-            {id: 2, text: "Reduzir a vegetação urbana", correct:false},
-            {id: 3, text: "Aumentar a pavimentação de ruas", correct:false},
-            {id: 4, text: "Investir em drenagem e planejamento urbano", correct:true}
+    {
+        pergunta: "O que pode ser feito para reduzir os riscos de enchentes nas cidades?",
+        respostas: [
+            {id: 1, texto: "Construir casas nas margens dos rios", correta: false},
+            {id: 2, texto: "Reduzir a vegetação urbana", correta: false},
+            {id: 3, texto: "Aumentar a pavimentação de ruas", correta: false},
+            {id: 4, texto: "Investir em drenagem e planejamento urbano", correta: true}
         ],
     },
-
-     {
-        question: "Quais são os principais sinais de risco antes de uma enchente?",
-        answers: [
-            {id: 1, text: "Dias muito quentes e secos", correct:false},
-            {id: 2, text: "Céu limpo e vento forte", correct:false},
-            {id: 3, text: "Nuvens carregadas, rios cheios e chuva constante", correct:true},
-            {id: 4, text: "Neve e granizo", correct:false}
+    {
+        pergunta: "Quais são os principais sinais de risco antes de uma enchente?",
+        respostas: [
+            {id: 1, texto: "Dias muito quentes e secos", correta: false},
+            {id: 2, texto: "Céu limpo e vento forte", correta: false},
+            {id: 3, texto: "Nuvens carregadas, rios cheios e chuva constante", correta: true},
+            {id: 4, texto: "Neve e granizo", correta: false}
         ],
     },
-
-     {
-        question: "Como o uso de calçadas e ruas asfaltadas pode contribuir para enchentes?",
-        answers: [
-            {id: 1, text: "Absorvem toda a água da chuva", correct:false},
-            {id: 2, text: "Permitem o escoamento natural da água", correct:false},
-            {id: 3, text: "Impedem a infiltração da água no solo", correct:true},
-            {id: 4, text: "Aumentam a vegetação urbana", correct:false}
+    {
+        pergunta: "Como o uso de calçadas e ruas asfaltadas pode contribuir para enchentes?",
+        respostas: [
+            {id: 1, texto: "Absorvem toda a água da chuva", correta: false},
+            {id: 2, texto: "Permitem o escoamento natural da água", correta: false},
+            {id: 3, texto: "Impedem a infiltração da água no solo", correta: true},
+            {id: 4, texto: "Aumentam a vegetação urbana", correta: false}
         ],
     },
-]
+];
 
-const questionElement = document.getElementById("question");
-const answersButtons = document.getElementById("answer-buttons");
-const nextButton = document.getElementById("next-btn");
+// Pegando os elementos do HTML
+const divPergunta = document.getElementById("question");
+const divRespostas = document.getElementById("answer-buttons");
+const botaoProx = document.getElementById("next-btn");
+const formContato = document.getElementById("form-contato");
 
-let currentQuestionIndex = 0;
-let score = 0;
+// Variáveis para controlar o quiz
+let perguntaAtual = 0;
+let pontos = 0;
+let jaRespondeu = false;
 
-function startQuiz() {
-    currentQuestionIndex = 0;
-    score = 0;
-    nextButton.innerHTML = "Próxima";
-    showQuestion();
+// Começa o quiz
+function comecarQuiz() {
+    perguntaAtual = 0;
+    pontos = 0;
+    botaoProx.innerText = "Próximo";
+    botaoProx.style.display = "none";
+    formContato.style.display = "none";
+    mostrarPerguntaQuiz();
 }
 
-function resetState() {
-    nextButton.style.display = "none";
-    while (answersButtons.firstChild) {
-        answersButtons.removeChild(answersButtons.firstChild);
+// Limpa as respostas antigas
+function limparTudo() {
+    botaoProx.style.display = "none";
+    jaRespondeu = false;
+    while (divRespostas.firstChild) {
+        divRespostas.removeChild(divRespostas.firstChild);
     }
 }
 
-function showQuestion() {
-    resetState();
-    let currentQuestion = questions[currentQuestionIndex];
-    let questionNo = currentQuestionIndex + 1;
-    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+// Mostra a pergunta e as opções
+function mostrarPerguntaQuiz() {
+    limparTudo();
+    const perguntaObj = perguntasQuiz[perguntaAtual];
+    divPergunta.innerText = `${perguntaAtual + 1}. ${perguntaObj.pergunta}`;
 
-    currentQuestion.answers.forEach(answer => {
-        const button = document.createElement("button");
-        button.innerHTML = answer.text;
-        button.dataset.id = answer.id;
-        button.classList.add("btn");
-        button.addEventListener("click", selectAnswer);
-        answersButtons.appendChild(button);
+    perguntaObj.respostas.forEach(resp => {
+        const botao = document.createElement("button");
+        botao.innerText = resp.texto;
+        botao.classList.add("btn");
+        botao.dataset.id = resp.id;
+        botao.addEventListener("click", clicarResposta);
+        divRespostas.appendChild(botao);
     });
 }
 
-function selectAnswer(e) {
-    const selectedBtn = e.target;
-    const answers = questions[currentQuestionIndex].answers;
-    const correctAnswer = answers.find(answer => answer.correct === true);
+// Quando clica numa resposta
+function clicarResposta(e) {
+    if (jaRespondeu) return;
 
-    const isCorrect = selectedBtn.dataset.id == correctAnswer.id;
+    jaRespondeu = true;
+    const botaoClicado = e.target;
+    const respostas = perguntasQuiz[perguntaAtual].respostas;
+    const certa = respostas.find(r => r.correta === true);
 
-    if (isCorrect) {
-        selectedBtn.classList.add("correct");
-        score++;
+    if (botaoClicado.dataset.id == certa.id) {
+        botaoClicado.classList.add("correta");
+        pontos++;
     } else {
-        selectedBtn.classList.add("incorrect");
+        botaoClicado.classList.add("incorreta");
     }
 
-    Array.from(answersButtons.children).forEach(button => {
-        button.disabled = true;
-    });
-
-    nextButton.style.display = "block";
+    botaoProx.style.display = "block";
 }
 
-function showScore() {
-    resetState();
-    questionElement.innerHTML = `Você acertou ${score} de ${questions.length}!`;
-    nextButton.innerHTML = "Jogar de novo";
-    nextButton.style.display = "block";
+// Mostra o resultado final e o formulário
+function mostrarResultado() {
+    limparTudo();
+    divPergunta.innerText = `Você acertou ${pontos} de ${perguntasQuiz.length}!`;
+    botaoProx.innerText = "Jogar de novo";
+    botaoProx.style.display = "block";
+    formContato.style.display = "block";
 }
 
-function handleNextButton() {
-    currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-        showQuestion();
+// Vai pra próxima pergunta ou mostra o resultado
+function proximaPerguntaQuiz() {
+    if (!jaRespondeu) return;
+    perguntaAtual++;
+    if (perguntaAtual < perguntasQuiz.length) {
+        mostrarPerguntaQuiz();
     } else {
-        showScore();
+        mostrarResultado();
     }
 }
 
-nextButton.addEventListener("click", () => {
-    if (currentQuestionIndex < questions.length) {
-        handleNextButton();
+// Clique no botão próximo
+botaoProx.addEventListener("click", () => {
+    if (perguntaAtual < perguntasQuiz.length) {
+        proximaPerguntaQuiz();
     } else {
-        startQuiz();
+        comecarQuiz();
     }
 });
 
-startQuiz();
+// Envio do formulário
+formContato.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const mensagem = document.getElementById("mensagem").value.trim();
+
+    if (nome && email && mensagem) {
+        alert(`Obrigado, ${nome}! Enviado com sucesso.`);
+        formContato.reset();
+    } else {
+        alert("Por favor, preencha todos os campos.");
+    }
+});
+
+// Inicia o quiz quando a página carrega
+comecarQuiz();

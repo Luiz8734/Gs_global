@@ -1,28 +1,37 @@
-/* =========================
-   VARIÁVEIS GLOBAIS
-   ========================= */
+/* 🌟 Variáveis globais */
 :root {
-  --font-primary: 'Poppins', 'Segoe UI', sans-serif;
+  --font-primary: 'Poppins', sans-serif;
 
-  /* Cores principais */
-  --color-bg-start: #0047AB;
-  --color-bg-end: #00C2FF;
+  --color-background: linear-gradient(135deg, #0047AB, #00C2FF);
   --color-text: #e0e0e0;
-  --color-hover: #FFB74D;
-  --color-button: #FFA726;
-  --color-header-start: #0a2f66;
-  --color-header-end: #007bff;
-  --color-container-bg: #FFA726;
-  --color-border: #ffffff;
 
-  /* Bordas e outros */
-  --border-radius: 12px;
-  --transition: 0.3s ease;
+  --color-header-bg: linear-gradient(90deg, #0a2f66, #007bff);
+
+  --color-logo-border: #ffffff;
+
+  --color-nav-link: #ffffff;
+  --color-nav-hover: #FFB74D;
+  --color-nav-bg-mobile: #0a2f66;
+
+  --color-button-border: #FFA726;
+  --color-button-hover: #FFA726;
+
+  --color-container-bg: #FFA726;
+  --color-container-text: #fff;
+  --color-container-subtext: #a9d6e5;
+
+  --border-radius: 16px;
+
+  --container-padding: 40px;
+
+  --gap-large: 60px;
+  --gap-medium: 32px;
+  --gap-small: 20px;
+
+  --shadow: 0 6px 18px rgba(0,0,0,0.10);
 }
 
-/* =========================
-   RESET E FONTE PADRÃO
-   ========================= */
+/* 🔧 Reset e Base */
 * {
   margin: 0;
   padding: 0;
@@ -30,62 +39,61 @@
   font-family: var(--font-primary);
 }
 
-/* =========================
-   FUNDO DO BODY
-   ========================= */
-body {
-  background: linear-gradient(135deg, var(--color-bg-start), var(--color-bg-end));
-  color: var(--color-text);
+html, body {
+  width: 100%;
+  overflow-x: hidden;
   min-height: 100vh;
+  background: var(--color-background);
+  color: var(--color-text);
 }
 
-/* =========================
-   CABEÇALHO (HEADER)
-   ========================= */
+/* 🔝 Header */
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px 80px;
+  padding: 10px 40px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  background: linear-gradient(90deg, var(--color-header-start), var(--color-header-end));
+  justify-content: space-between;
+  background: var(--color-header-bg);
   z-index: 999;
 }
 
-/* Logo da empresa */
 .logo {
-  max-width: 130px;
-  margin-right: 40px;
-  border: 2px solid var(--color-border);
+  max-width: 120px;
+  border: 2px solid var(--color-logo-border);
   border-radius: 50px;
 }
 
-/* =========================
-   NAVEGAÇÃO
-   ========================= */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: var(--color-nav-link);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* 🧭 Navegação */
 .nav {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
-/* Lista de links do menu */
 .nav ul {
   display: flex;
   list-style: none;
-  gap: 32px;
+  gap: var(--gap-medium);
   justify-content: center;
   align-items: center;
-  padding: 0;
-  margin: 0;
 }
 
-/* Links do menu */
 .nav li a {
-  color: #ffffff;
+  color: var(--color-nav-link);
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
@@ -94,151 +102,194 @@ header {
   border-radius: 6px;
 }
 
-/* Efeito hover nos links */
 .nav li a:hover {
-  color: var(--color-hover);
+  color: var(--color-nav-hover);
   background: rgba(255, 255, 255, 0.07);
 }
 
-/* =========================
-   SEÇÃO PRINCIPAL
-   ========================= */
+nav ul li a.active {
+  color: #FFD700;
+  font-weight: bold;
+  border-bottom: 2px solid #FFD700;
+}
+
+/* 🎯 Seção Principal */
 section {
   width: 100%;
   min-height: 100vh;
   padding: 150px 40px 60px;
-  background: transparent;
   display: flex;
-  flex-direction: column; /* coluna */
+  flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-  gap: 40px;
-  box-sizing: border-box;
+  justify-content: center;
+  gap: var(--gap-large);
+  overflow: hidden;
+  z-index: 1;
+  flex-wrap: wrap;
 }
 
-/* =========================
-   BLOCO DE CONTEÚDO (CONTEINER)
-   ========================= */
+/* 🧠 Conteúdo */
 .conteiner {
-  max-width: 600px;
+  max-width: 700px;
   width: 100%;
-  color: #fff;
+  background-color: var(--color-container-bg);
+  color: var(--color-container-text);
+  padding: var(--container-padding);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--gap-medium);
+  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
   gap: 25px;
-  background: var(--color-container-bg);
-  border-radius: var(--border-radius);
-  padding: 30px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  z-index: 1;
+  position: relative;
+
 }
 
 .conteiner h1 {
   font-size: 2.2em;
-  color: #fff;
+  color: var(--color-container-text);
+}
+
+.conteiner h3 {
+  font-size: 1.4em;
+  color: var(--color-container-subtext);
 }
 
 .conteiner p {
+  color: var(--color-container-text);
   font-size: 1em;
-  line-height: 1.5em;
-  color: #fff;
+  line-height: 1.7;
+  margin-bottom: 16px;
 }
 
-/* =========================
-   IMAGEM DA PLACA
-   ========================= */
-.placa {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* 🎯 Botão */
+#quiz-btn {
+  border: 2px solid var(--color-button-border);
+  padding: 10px;
+  border-radius: 15px;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#quiz-btn:hover {
+  background-color: var(--color-button-hover);
+  color: white;
+}
+
+/* ⬇️ Rodapé */
+footer {
   width: 100%;
+  padding: 20px 40px;
+  background: var(--color-header-bg);
+  color: var(--color-text);
+  text-align: center;
+  font-size: 0.9em;
+  position: relative;
+  bottom: 0;
+  border-top: 3px solid var(--color-button-border);
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
-.placa img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: var(--border-radius);
-  border: 2px solid var(--color-border);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  object-fit: cover;
-  display: block;
+footer p {
+  margin: 0;
 }
 
-/* =========================
-   RESPONSIVIDADE
-   ========================= */
+/* 📱 Responsividade */
 @media (max-width: 900px) {
   header {
-    flex-direction: column;
     padding: 10px 20px;
-    align-items: center;
   }
 
-  .logo {
-    margin-right: 0;
-    margin-bottom: 12px;
-    max-width: 90px;
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: var(--color-nav-bg-mobile);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .nav.active {
+    display: flex;
   }
 
   .nav ul {
-    gap: 16px;
+    flex-direction: column;
+    gap: var(--gap-small);
   }
 
   section {
     flex-direction: column;
     align-items: center;
-    gap: 32px;
+    gap: var(--gap-medium);
     padding: 120px 10px 40px;
+    text-align: center; /* Centraliza texto */
   }
 
   .conteiner {
-    align-items: center;
+    padding: 24px;
     text-align: center;
-    max-width: 100%;
-    padding: 18px;
+    align-items: center;
+    border-radius: 12px;
   }
 
-  .placa img {
-    max-width: 100%;
+  .conteiner img {
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+    
+  }
+
+  .conteiner h1,
+  .conteiner h3,
+  .conteiner p {
+    text-align: center;
+  }
+
+  footer {
+    padding: 16px 20px;
+    font-size: 0.85em;
   }
 }
 
-/* =========================
-   BOTÃO DO QUIZ
-   ========================= */
-#quiz-btn {
-  border: 2px solid var(--color-button);
-  padding: 10px;
-  border-radius: 15px;
-}
+@media (max-width: 500px) {
+  .conteiner {
+    padding: 16px;
+  }
 
-#quiz-btn:hover {
-  background-color: var(--color-button);
-  color: white;
-}
+  .conteiner img {
+    max-width: 140px;
+    margin-bottom: 16px;
+  }
 
-/* =========================
-   LINK ATIVO DO MENU
-   ========================= */
-nav ul li a.active {
-  color: #FFD700; 
-  font-weight: bold;
-  border-bottom: 2px solid #FFD700;
-}
+  .conteiner h1 {
+    font-size: 1.6em;
+    text-align: center;
+  }
 
-/* =========================
-   RODAPÉ (FOOTER)
-   ========================= */
-footer {
-  background: linear-gradient(90deg, var(--color-header-start), var(--color-header-end));
-  color: #fff;
-  text-align: center;
-  padding: 20px 10px;
-  font-size: 14px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
-  border-top: 2px solid #FFD700;
+  .conteiner h3 {
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  .conteiner p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    text-align: center;
+  }
 }

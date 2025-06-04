@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>QUIZ</title>
-    <link rel="stylesheet" href="../quiz/quiz.css">
+    <link rel="stylesheet" href="/gs_global/src/quiz/quiz.css" />
 </head>
 <body>
     <div class="app">
@@ -19,7 +19,21 @@
             </div>
             <button id="next-btn">Próximo</button>
         </div>
+
+        
+        <form id="form-contato" style="display: none; margin-top: 20px;">
+            <h3>Envie seu feedback</h3>
+            <input type="text" id="nome" placeholder="Seu nome" required 
+                style="display:block; margin-bottom: 10px; width: 100%; padding: 8px;" />
+            <input type="email" id="email" placeholder="Seu email" required 
+                style="display:block; margin-bottom: 10px; width: 100%; padding: 8px;" />
+            <textarea id="mensagem" placeholder="Digite sua mensagem..." rows="4" required 
+                style="display:block; margin-bottom: 10px; width: 100%; padding: 8px;"></textarea>
+            <button type="submit" 
+                style="padding: 10px 20px;">Enviar</button>
+        </form>
     </div>
-    <script src="../quiz/quiz.js"></script>
+
+    <script src="/gs_global/src/quiz/quiz.js"></script>
 </body>
 </html>
