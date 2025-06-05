@@ -1,4 +1,6 @@
-/*  Variáveis globais */
+/* =========================
+   VARIÁVEIS GLOBAIS
+   ========================= */
 :root {
   --font-primary: 'Poppins', sans-serif;
 
@@ -31,7 +33,9 @@
   --shadow: 0 6px 18px rgba(0,0,0,0.10);
 }
 
-/*  Reset e Base */
+/* =========================
+   RESET BÁSICO E FONTE PADRÃO
+   ========================= */
 * {
   margin: 0;
   padding: 0;
@@ -39,6 +43,9 @@
   font-family: var(--font-primary);
 }
 
+/* =========================
+   HTML E BODY
+   ========================= */
 html, body {
   width: 100%;
   overflow-x: hidden;
@@ -47,7 +54,9 @@ html, body {
   color: var(--color-text);
 }
 
-/*  Header */
+/* =========================
+   CABEÇALHO (HEADER)
+   ========================= */
 header {
   position: fixed;
   top: 0;
@@ -61,12 +70,14 @@ header {
   z-index: 999;
 }
 
+/* Logo */
 .logo {
   max-width: 120px;
   border: 2px solid var(--color-logo-border);
   border-radius: 50px;
 }
 
+/* Botão do menu (hamburguer) - inicialmente escondido */
 .menu-toggle {
   display: none;
   font-size: 28px;
@@ -77,13 +88,16 @@ header {
   z-index: 1000;
 }
 
-/*  Navegação */
+/* =========================
+   NAVEGAÇÃO PRINCIPAL
+   ========================= */
 .nav {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
+/* Lista do menu */
 .nav ul {
   display: flex;
   list-style: none;
@@ -92,6 +106,7 @@ header {
   align-items: center;
 }
 
+/* Links do menu */
 .nav li a {
   color: var(--color-nav-link);
   text-decoration: none;
@@ -102,18 +117,39 @@ header {
   border-radius: 6px;
 }
 
+/* Efeito hover nos links */
 .nav li a:hover {
   color: var(--color-nav-hover);
   background: rgba(255, 255, 255, 0.07);
 }
 
+/* =========================
+   LINK ATIVO DO MENU
+   ========================= */
 nav ul li a.active {
   color: #FFD700;
   font-weight: bold;
   border-bottom: 2px solid #FFD700;
 }
 
-/*  Seção Principal */
+/* =========================
+   BOTÃO DO QUIZ
+   ========================= */
+#quiz-btn {
+  border: 2px solid var(--color-button-border);
+  padding: 10px;
+  border-radius: 15px;
+}
+
+/* Hover do botão */
+#quiz-btn:hover {
+  background-color: var(--color-button-hover);
+  color: white;
+}
+
+/* =========================
+   SEÇÃO PRINCIPAL
+   ========================= */
 section {
   width: 100%;
   min-height: 100vh;
@@ -130,7 +166,9 @@ section {
   margin-top: 10%;
 }
 
-/* Placa */
+/* =========================
+   PLACA (IMAGEM GRANDE)
+   ========================= */
 .placa {
   display: flex;
   align-items: center;
@@ -145,6 +183,7 @@ section {
   right: 10%;
 }
 
+/* Imagem dentro da placa */
 .placa img {
   width: 100%;
   height: 100%;
@@ -153,7 +192,9 @@ section {
   border: solid 2px white;
 }
 
-/*  Conteúdo */
+/* =========================
+   CONTAINER DOS CONTEÚDOS
+   ========================= */
 .conteiner {
   max-width: 700px;
   width: 100%;
@@ -170,19 +211,21 @@ section {
   gap: 25px;
   z-index: 1;
   position: relative;
-  
 }
 
+/* Título principal */
 .conteiner h1 {
   font-size: 2.2em;
   color: var(--color-container-text);
 }
 
+/* Subtítulo */
 .conteiner h3 {
   font-size: 1.4em;
   color: var(--color-container-subtext);
 }
 
+/* Parágrafos */
 .conteiner p {
   color: var(--color-container-text);
   font-size: 1em;
@@ -190,23 +233,9 @@ section {
   margin-bottom: 16px;
 }
 
-/*  Botão */
-#quiz-btn {
-  border: 2px solid var(--color-button-border);
-  padding: 10px;
-  border-radius: 15px;
-  background: none;
-  color: inherit;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#quiz-btn:hover {
-  background-color: var(--color-button-hover);
-  color: white;
-}
-
-/* Rodapé */
+/* =========================
+   RODAPÉ (FOOTER)
+   ========================= */
 footer {
   width: 100%;
   padding: 20px 40px;
@@ -221,21 +250,27 @@ footer {
   z-index: 10;
 }
 
+/* Parágrafo do footer */
 footer p {
   margin: 0;
 }
 
-/*  Responsividade */
+/* =========================
+   RESPONSIVIDADE - TELAS ATÉ 900PX
+   ========================= */
 @media (max-width: 900px) {
+
+  /* Header responsivo */
   header {
     padding: 10px 20px;
   }
 
+  /* Botão do menu aparece */
   .menu-toggle {
     display: block;
-    
   }
 
+  /* Menu mobile */
   .nav {
     position: absolute;
     top: 60px;
@@ -248,112 +283,159 @@ footer p {
     padding: 20px 0;
   }
 
+  /* Menu mobile ativo */
   .nav.active {
     display: flex;
   }
 
+  /* Lista do menu mobile */
   .nav ul {
     flex-direction: column;
     gap: var(--gap-small);
   }
 
+  /* Seção principal responsiva */
   section {
     flex-direction: column;
     align-items: center;
     gap: var(--gap-medium);
     padding: 120px 10px 40px;
-    text-align: center; /* Centraliza texto */
+    text-align: center;
+    margin-top: 0;
+    min-height: unset;
   }
 
+  /* Placa responsiva */
   .placa {
-    width: 420px;
-    height: 420px;
+    width: 90vw;
+    max-width: 420px;
+    height: auto;
+    aspect-ratio: 1/1;
     margin: 0 auto var(--gap-medium) auto;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff3e0;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    right: unset;
   }
 
+  /* Imagem da placa responsiva */
   .placa img {
     width: 100%;
     height: 100%;
     max-width: 420px;
     max-height: 420px;
+    object-fit: contain;
     border: solid 2px white;
+    display: block;
   }
-  
 
+  /* Container de conteúdo responsivo */
   .conteiner {
     padding: 24px;
     text-align: center;
     align-items: center;
     border-radius: 12px;
-    
+    max-width: 98vw;
+    width: 100%;
+    margin-bottom: var(--gap-medium);
+    box-sizing: border-box;
+    position: static;
   }
 
+  /* Imagem dentro do conteúdo responsivo */
   .conteiner img {
     display: block;
     margin: 0 auto 20px auto;
-    max-width: 420px;
+    max-width: 90vw;
     width: 100%;
     height: auto;
   }
 
+  /* Títulos e textos centralizados no conteúdo responsivo */
   .conteiner h1,
   .conteiner h3,
   .conteiner p {
     text-align: center;
+    word-break: break-word;
   }
 
+  /* Footer responsivo */
   footer {
     padding: 16px 20px;
     font-size: 0.85em;
   }
 }
 
+/* =========================
+   RESPONSIVIDADE - TELAS ATÉ 500PX
+   ========================= */
 @media (max-width: 500px) {
+
+  /* Placa ainda menor */
   .placa {
-    width: 420px;
-    height: 420px;
+    width: 96vw;
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 1/1;
     margin: 0 auto var(--gap-medium) auto;
     border: solid 2px white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
+  /* Imagem da placa menor */
   .placa img {
     width: 100%;
     height: 100%;
-    max-width: 420px;
-    max-height: 420px;
+    max-width: 320px;
+    max-height: 320px;
+    object-fit: contain;
+    display: block;
   }
 
+  /* Container de conteúdo menor */
   .conteiner {
-    padding: 16px;
-    
+    padding: 12px;
+    max-width: 98vw;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: var(--gap-medium);
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 10%;
   }
 
+  /* Imagem dentro do conteúdo menor */
   .conteiner img {
-    max-width: 140px;
+    max-width: 90vw;
     margin-bottom: 16px;
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
+  /* Título principal menor */
   .conteiner h1 {
-    font-size: 1.6em;
+    font-size: 1.3em;
     text-align: center;
   }
 
+  /* Subtítulo menor */
   .conteiner h3 {
-    font-size: 1.2em;
+    font-size: 1em;
     text-align: center;
   }
 
+  /* Parágrafo menor */
   .conteiner p {
     font-size: 0.95em;
     line-height: 1.5;
     text-align: center;
+    word-break: break-word;
   }
-}
-.placa {
-  transition: transform 0.3s ease-in-out; /* Duração e suavidade da transição */
-}
-
-.placa:hover {
-  transform: scale(1.1); /* Aumenta o tamanho da imagem em 20% */
 }
