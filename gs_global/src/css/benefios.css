@@ -118,6 +118,25 @@ header {
   background: rgba(255, 255, 255, 0.07);
 }
 
+.color-switch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 20px; /* Espaço entre os ícones e o menu */
+}
+
+.color-icon {
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--color-nav-link);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.color-icon:hover {
+  color: var(--color-nav-hover);
+  transform: scale(1.2);
+}
+
 /* =========================
    BOTÃO DO QUIZ
    ========================= */
@@ -212,6 +231,17 @@ section {
     flex-direction: column;
     padding: 10px 20px;
     align-items: center;
+  }
+
+  .color-switch {
+  display: flex;
+  justify-content: center;
+  position: relative ;
+  right: 10px;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  width: 100%;
   }
 
   .header-left {
