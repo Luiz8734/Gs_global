@@ -62,6 +62,7 @@
   font-family: var(--font-primary);
 }
 
+
 html, body {
   height: 100%;
   width: 100%;
@@ -171,6 +172,41 @@ nav ul li a.active {
   color: #FFD700;
   font-weight: bold;
   border-bottom: 2px solid #FFD700;
+}
+
+/* =========================
+   ÍCONES DE TROCA DE COR
+   ========================= */
+.color-switch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 20px; /* Espaço entre os ícones e o menu */
+}
+
+.color-icon {
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--color-nav-link);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.color-icon:hover {
+  color: var(--color-nav-hover);
+  transform: scale(1.2);
+}
+
+@media (max-width: 900px) {
+  .color-switch {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .color-icon {
+    font-size: 18px;
+  }
 }
 
 /* =========================
@@ -365,7 +401,6 @@ footer a:hover {
     border-radius: 6px;
     transition: color 0.3s ease;
   }
-
 
   section {
     padding: var(--section-padding-mobile);

@@ -82,7 +82,7 @@ header {
   border-radius: 50px;
 }
 
-/* Botão do menu (hamburguer) - inicialmente escondido */
+/* Botão do menu (hamburguer) */
 .menu-toggle {
   display: none;
   font-size: 28px;
@@ -100,6 +100,7 @@ header {
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 /* Lista do menu */
@@ -129,6 +130,28 @@ header {
 }
 
 /* =========================
+   ÍCONES DE TROCA DE COR
+   ========================= */
+.color-switch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 20px; /* Espaço entre os ícones e o menu */
+}
+
+.color-icon {
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--color-nav-link);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.color-icon:hover {
+  color: var(--color-nav-hover);
+  transform: scale(1.2);
+}
+
+/* =========================
    BOTÃO DO QUIZ
    ========================= */
 #quiz-btn {
@@ -137,7 +160,6 @@ header {
   border-radius: 15px;
 }
 
-/* Hover do botão */
 #quiz-btn:hover {
   background-color: var(--color-button-hover);
   color: white;
@@ -182,19 +204,16 @@ section {
   border: solid 2px white;
 }
 
-/* Título principal */
 .conteiner h1 {
   font-size: 2.2em;
   color: var(--color-container-text);
 }
 
-/* Subtítulo */
 .conteiner h3 {
   font-size: 1.4em;
   color: var(--color-container-subtext);
 }
 
-/* Parágrafos */
 .conteiner p {
   color: var(--color-container-text);
   font-size: 1em;
@@ -203,7 +222,7 @@ section {
 }
 
 /* =========================
-   CÍRCULOS COM IMAGENS (DECORATIVOS)
+   CÍRCULOS COM IMAGENS
    ========================= */
 .circulo-esquerdo,
 .circulo-direito {
@@ -218,21 +237,18 @@ section {
   padding: 10px;
 }
 
-/* Posição do círculo esquerdo */
 .circulo-esquerdo {
   position: absolute;
   top: 160px;
   left: 40px;
 }
 
-/* Posição do círculo direito */
 .circulo-direito {
   position: absolute;
   bottom: 60px;
   right: 40px;
 }
 
-/* Imagens dentro dos círculos */
 .circulo-esquerdo img,
 .circulo-direito img {
   width: 100%;
@@ -242,7 +258,7 @@ section {
 }
 
 /* =========================
-   RODAPÉ (FOOTER)
+   RODAPÉ
    ========================= */
 footer {
   width: 100%;
@@ -258,7 +274,6 @@ footer {
   z-index: 10;
 }
 
-/* Parágrafo do footer */
 footer p {
   margin: 0;
 }
@@ -297,6 +312,11 @@ footer p {
     gap: var(--gap-small);
   }
 
+  .color-switch {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
   section {
     flex-direction: column;
     align-items: center;
@@ -319,27 +339,10 @@ footer p {
     margin: 10px 0;
     padding: 5px;
     margin-top: 10%;
-  }
-
-  .circulo-esquerdo,
-  .circulo-direito {
     top: auto;
     left: auto;
     bottom: auto;
     right: auto;
-  }
-
-  .circulo-esquerdo img,
-  .circulo-direito img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-
-  footer {
-    padding: 16px 20px;
-    font-size: 0.85em;
   }
 }
 
@@ -362,6 +365,10 @@ footer p {
   .conteiner p {
     font-size: 0.95em;
     line-height: 1.5;
+  }
+
+  .color-icon {
+    font-size: 18px;
   }
 }
 

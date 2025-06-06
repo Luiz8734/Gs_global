@@ -1,5 +1,4 @@
 body {
-   
     background: linear-gradient(135deg, #0047AB, #00C2FF);
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -80,4 +79,13 @@ body {
     background-color: #e57373 !important;
     color: #fff !important;
     border-color: #c62828 !important;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .color-icon {
+        font-size: 24px;
+    }
 }

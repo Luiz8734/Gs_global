@@ -122,6 +122,41 @@ nav ul li a.active {
   border-bottom: 2px solid #FFD700;
 }
 
+/* =========================
+   ÍCONES DE TROCA DE COR
+   ========================= */
+.color-switch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 20px;
+}
+
+.color-icon {
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--color-white);
+  transition: transform 0.3s, color 0.3s;
+}
+
+.color-icon:hover {
+  color: var(--color-accent-hover);
+  transform: scale(1.2);
+}
+
+@media (max-width: 900px) {
+  .color-switch {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .color-icon {
+    font-size: 18px;
+  }
+}
+
 /* Botão especial quiz */
 #quiz-btn {
   border: 2px solid var(--color-accent);
@@ -218,8 +253,8 @@ section {
   }
 
   .nav {
-    position: absolute;
-    top: 70px;
+    position: fixed;
+    top: 60px;
     left: 0;
     width: 100%;
     background: var(--color-header-start);
@@ -227,6 +262,7 @@ section {
     align-items: center;
     padding: 20px 0;
     display: none;
+    z-index: 1001;
   }
 
   .nav.active {
@@ -264,6 +300,25 @@ section {
     width: 90%;
     height: auto;
     margin: 0 auto;
+  }
+
+  .color-switch {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+   #quiz-btn {
+    margin-top: 100px;
+    position: relative;
+  }
+   .color-switch {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .color-icon {
+    font-size: 18px;
   }
 }
 
@@ -353,8 +408,5 @@ footer a:hover {
 }
 
 .next {
-
   right:10px;
 }
-
-
