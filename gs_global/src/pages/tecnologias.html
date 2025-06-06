@@ -8,6 +8,7 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="../css/tecnologias.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <title>Infraestrutura Tecnológica</title>
 </head>
 
@@ -18,7 +19,7 @@
       <button class="menu-toggle" aria-label="Abrir Menu" onclick="toggleMenu()">☰</button>
     </div>
 
-     <nav class="nav">
+    <nav class="nav">
       <ul>
         <li><a href="../../../index.html" >Inicio</a></li>
         <li><a href="/gs_global/src/pages/tecnologias.html" class="active">Nossa Tecnologias</a></li>
@@ -28,6 +29,11 @@
         <li><a href="/gs_global/src/pages/solucao.html">Como ajudará</a></li>
         <li><a href="/gs_global/src/quiz/quiz.html" id="quiz-btn">QUIZ</a></li>
       </ul>
+      <div class="color-switch">
+        <i class="fas fa-sun color-icon" onclick="changeBackground('lightyellow')" title="Tema Claro"></i>
+        <i class="fas fa-moon color-icon" onclick="changeBackground('black')" title="Tema Escuro"></i>
+        <i class="fas fa-leaf color-icon" onclick="changeBackground('lightgreen')" title="Tema Verde"></i>
+      </div>
     </nav>
   </header>
 
@@ -72,5 +78,6 @@
   </footer>
 
   <script src="/gs_global/src/hamburguer/hamburguer.js"></script>
+  <script src="/gs_global/src/js/color-switch.js"></script>
 </body>
 </html>
